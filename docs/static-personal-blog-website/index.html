@@ -163,66 +163,75 @@
       <div id="article-content">
         
         
-        <h1 id="1-安装-hugo">1 安装 Hugo</h1>
-<p>Hugo是一个静态网站生成器，可以将Markdown文件转换为HTML文件。
-在正式安装Hugo之前，需要先安装Git, Go, 和 Dart Sass。</p>
-<h2 id="git">GIT：</h2>
+        <h1 id="1-install-hugo">1 Install Hugo</h1>
+<p>Hugo is a static site generator that can convert Markdown files into HTML files. Before installing Hugo, you need to install Git, Go, and Dart Sass.</p>
+<h2 id="git">Git:</h2>
 <ul>
-<li>从来源构建Hugo</li>
-<li>使用Hugo模块功能</li>
-<li>将主题安装为Git子模块</li>
-<li>从本地GIT存储库中访问提交信息</li>
-<li>使用CloudCannon，CloudFlare页面，Github页面，Github页面，Gitlab页面和Netlify等服务托管您的网站。</li>
+<li>Build Hugo from source</li>
+<li>Use Hugo module functionality</li>
+<li>Install themes as Git submodules</li>
+<li>Access commit information from a local Git repository</li>
+<li>Host your site using services like CloudCannon, CloudFlare Pages, GitHub Pages, GitLab Pages, and Netlify.</li>
 </ul>
-<p>安装链接如下：</p>
-<p><a href="https://git-scm.com/download/mac" target="_blank">Mac 下载</a></p>
-<p><a href="https://git-scm.com/download/win" target="_blank">Windows 下载</a></p>
-<p><a href="https://git-scm.com/download/linux" target="_blank">Linux 下载</a></p>
-<h2 id="go">Go：</h2>
+<p>Download links:</p>
+<p><a href="https://git-scm.com/download/mac" target="_blank">Mac Download</a></p>
+<p><a href="https://git-scm.com/download/win" target="_blank">Windows Download</a></p>
+<p><a href="https://git-scm.com/download/linux" target="_blank">Linux Download</a></p>
+<h2 id="go">Go:</h2>
 <ul>
-<li>从来源构建Hugo</li>
-<li>使用Hugo模块功能
-下载链接：<a href="https://go.dev/doc/install" target="_blank">https://go.dev/doc/install</a></li>
+<li>Build Hugo from source</li>
+<li>Use Hugo module functionality</li>
 </ul>
-<h2 id="dart-sass">Dart Sass：</h2>
+<p>Download link: <a href="https://go.dev/doc/install" target="_blank">https://go.dev/doc/install</a></p>
+<h2 id="dart-sass">Dart Sass:</h2>
 <ul>
-<li>
-<p>使用SASS语言的最新功能时，需要Dart Sass将Sass转移到CSS。</p>
-<p>下载链接：<a href="https://gohugo.io/functions/css/sass/#dart-sass" target="_blank">https://gohugo.io/functions/css/sass/#dart-sass</a></p>
-</li>
+<li>Required for using the latest features of the SASS language to convert Sass into CSS.</li>
 </ul>
-<p>在以上三个软件安装完成后，就可以开始安装Hugo了。推荐安装extended/deploy edition。</p>
-<p>命令行输入：</p>
+<p>Download link: <a href="https://gohugo.io/functions/css/sass/#dart-sass" target="_blank">https://gohugo.io/functions/css/sass/#dart-sass</a></p>
+<p>Once the above three software packages are installed, you can proceed to install Hugo. It is recommended to install the extended/deploy edition.</p>
+<p>Command to install:</p>
 <pre tabindex="0"><code>CGO_ENABLED=1 go install -tags extended,withdeploy github.com/gohugoio/hugo@latest
-</code></pre><h1 id="2-快速开始">2 快速开始</h1>
-<p>浏览器打开Hugo官网：<a href="https://gohugo.io/" target="_blank">https://gohugo.io/</a>，点击<code>主题</code>菜单栏选择喜欢的网页模版。</p>
-<h1 id="3-托管到github">3 托管到github</h1>
-<p>把我们本地生成的静态网页托管到github上进行保存，而不用自己进行维护。参考<a href="https://blog.csdn.net/xiao_feng007/article/details/106366218" target="_blank">这篇</a>。更新指令如下：</p>
+</code></pre><h1 id="2-quick-start">2 Quick Start</h1>
+<p>Open the Hugo official website in your browser: <a href="https://gohugo.io/" target="_blank">https://gohugo.io/</a>, click on the <code>Themes</code> menu to choose a template you like.</p>
+<h1 id="3-host-on-github">3 Host on GitHub</h1>
+<p>Host the static website generated locally on GitHub for storage without needing to maintain it yourself. Refer to <a href="https://blog.csdn.net/xiao_feng007/article/details/106366218" target="_blank">this article</a>. Update commands are as follows:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">(</span>base<span class="o">)</span> ➜  newsite git:<span class="o">(</span>main<span class="o">)</span> ✗ hugo --minify --theme<span class="o">=</span>docura --baseURL<span class="o">=</span><span class="s2">&#34;https://Greletudiant.github.io&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="o">(</span>base<span class="o">)</span> ➜  newsite git:<span class="o">(</span>main<span class="o">)</span> <span class="nb">cd</span> ./public
 </span></span><span class="line"><span class="cl"><span class="o">(</span>base<span class="o">)</span> ➜  public git:<span class="o">(</span>main<span class="o">)</span> ✗ git add .
 </span></span><span class="line"><span class="cl"><span class="o">(</span>base<span class="o">)</span> ➜  public git:<span class="o">(</span>main<span class="o">)</span> ✗ git commit -m <span class="s2">&#34;update&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="o">(</span>base<span class="o">)</span> ➜  public git:<span class="o">(</span>main<span class="o">)</span> ✗ git push origin main
-</span></span></code></pre></div><p>这是我的github仓库地址：<a href="https://github.com/Greletudiant/bstass2.git" target="_blank">https://github.com/Greletudiant/bstass2.git</a></p>
-<h1 id="github-pages静态文件发布">GitHub Pages静态文件发布</h1>
-<h2 id="1-设置github-pages">1. 设置GitHub Pages</h2>
-<p>在仓库的设置页面（Settings），找到“GitHub Pages”部分。
-在“Source”下拉菜单中，选择“main branch”（或“master branch”，取决于你的仓库设置）。
-点击“Save”按钮。</p>
-<h2 id="2-访问网站">2. 访问网站</h2>
-<p>在“Source”下拉菜单中，选择“main branch”（或“master branch”，取决于你的仓库设置）。
-点击“Save”按钮。
-等待一段时间，GitHub Pages会自动构建你的网站。
-访问你的网站地址：URL_ADDRESS访问你的网站地址：https://yourusername.github.io。</p>
-<p>具体操作步骤参考<a href="https://blog.csdn.net/zk_tww/article/details/145367292?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522c722e1a9c3de35bf098d0094ec740a1b%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=c722e1a9c3de35bf098d0094ec740a1b&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-5-145367292-null-null.142%5ev102%5epc_search_result_base6&amp;utm_term=%E5%AF%B9%E6%89%98%E7%AE%A1%E5%88%B0github%E4%B8%8A%E7%9A%84%E9%9D%99%E6%80%81%E7%BD%91%E9%A1%B5%E8%BF%9B%E8%A1%8C%E6%B8%B2%E6%9F%93%E3%80%82&amp;spm=1018.2226.3001.4187" target="_blank">这篇</a></p>
-<h1 id="netlify对托管到github上的静态网页进行渲染">Netlify对托管到github上的静态网页进行渲染</h1>
-<p>1 Netlify官网：
-官方首页：<a href="https://www.netlify.com/" target="_blank">https://www.netlify.com/</a></p>
-<p>2 首先是到netlify申请注册一个账号。这里可以使用Github、Gitlab以及Bitbucket直接授权登陆。然后登录到空间管理中心，点击右上角的&quot;New site from Git&quot;添加网站。</p>
-<p>3 然后根据自己的托管平台，可以选择GitHub、GitLab或者BitBucket。我们以最常用的GitHub为演示例子。（选择GitHub的同学，别忘了勾选下方的&quot;Limit GitHub access to public repositories.&ldquo;选项）</p>
-<p>4 点击GitHub之后会弹出一个让你授权的窗口，然后点击&quot;Authorize netlify&quot;之后，就会在netlify中读取你所有的代码库。</p>
-<p>5 点击你已经建好的库，选好分支（默认master即可），然后点击&quot;Deploy site&rdquo;，系统就会自动编译你的静态页面了。同时还会给出你的页面二级域名等信息。</p>
-<p>6 点击创建后，稍等一会儿，你就可以看到Netlify免费静态空间已经创建成功了，同时你在GitHub的代码也成功在Netlify运行了。</p>
+</span></span></code></pre></div><p>This is my GitHub repository: <a href="https://github.com/Greletudiant/bstass2.git" target="_blank">https://github.com/Greletudiant/bstass2.git</a></p>
+<h1 id="github-pages-static-file-deployment">GitHub Pages Static File Deployment</h1>
+<h2 id="1-configure-github-pages">1. Configure GitHub Pages</h2>
+<p>In the repository settings page, locate the &ldquo;GitHub Pages&rdquo; section.<br>
+In the &ldquo;Source&rdquo; dropdown menu, select &ldquo;main branch&rdquo; (or &ldquo;master branch,&rdquo; depending on your repository settings).<br>
+Click the &ldquo;Save&rdquo; button.</p>
+<h2 id="2-access-the-website">2. Access the Website</h2>
+<p>Wait for a while, and GitHub Pages will automatically build your website.<br>
+Visit your website at: <code>https://yourusername.github.io</code>.</p>
+<p>Refer to <a href="https://blog.csdn.net/zk_tww/article/details/145367292" target="_blank">this article</a> for detailed steps.</p>
+<h1 id="netlify-for-rendering-static-pages-hosted-on-github">Netlify for Rendering Static Pages Hosted on GitHub</h1>
+<ol>
+<li>
+<p>Netlify Official Website:<br>
+Homepage: <a href="https://www.netlify.com/" target="_blank">https://www.netlify.com/</a></p>
+</li>
+<li>
+<p>First, register an account on Netlify. You can log in using GitHub, GitLab, or Bitbucket authorization. After logging in, go to the management center and click &ldquo;New site from Git&rdquo; in the top-right corner to add a site.</p>
+</li>
+<li>
+<p>Based on your hosting platform, choose GitHub, GitLab, or Bitbucket. For demonstration, we will use GitHub (for GitHub users, don&rsquo;t forget to check the &ldquo;Limit GitHub access to public repositories&rdquo; option).</p>
+</li>
+<li>
+<p>After clicking GitHub, a window will pop up asking for authorization. Click &ldquo;Authorize netlify,&rdquo; and Netlify will read all your repositories.</p>
+</li>
+<li>
+<p>Select the repository you have created, choose the branch (default is master), and click &ldquo;Deploy site.&rdquo; The system will automatically compile your static pages and provide a secondary domain for your site.</p>
+</li>
+<li>
+<p>After creation, wait for a moment. You will see that the free static space on Netlify has been successfully created, and your GitHub code is now running on Netlify.</p>
+</li>
+</ol>
 
       </div>
       
@@ -275,14 +284,14 @@
     <strong><i class="icon icon-toc"></i> On this page</strong>
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#git">GIT：</a></li>
-    <li><a href="#go">Go：</a></li>
-    <li><a href="#dart-sass">Dart Sass：</a></li>
+    <li><a href="#git">Git:</a></li>
+    <li><a href="#go">Go:</a></li>
+    <li><a href="#dart-sass">Dart Sass:</a></li>
   </ul>
 
   <ul>
-    <li><a href="#1-设置github-pages">1. 设置GitHub Pages</a></li>
-    <li><a href="#2-访问网站">2. 访问网站</a></li>
+    <li><a href="#1-configure-github-pages">1. Configure GitHub Pages</a></li>
+    <li><a href="#2-access-the-website">2. Access the Website</a></li>
   </ul>
 </nav>
   </div>
