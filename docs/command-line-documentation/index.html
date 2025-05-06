@@ -1,135 +1,595 @@
-<!doctype html><html lang=en-US><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="fake wabsite"><meta name=author content="Your Name"><title>Command Line & Documentation · fake website</title>
-<link rel=canonical href=https://Greletudiant.github.io/docs/command-line-documentation/><link rel=stylesheet href=/scss/base.css integrity><link rel=stylesheet href=/scss/theme/default.css integrity><link rel=preconnect href=https://-dsn.algolia.net crossorigin><link rel=stylesheet href=/scss/component/docsearch.css integrity><link rel=manifest href=/manifest.json><link rel=icon href=/img/icon/favicon.ico><link rel=icon href=/img/icon/icon-16.png sizes=16x16 type=image/png><link rel=icon href=/img/icon/icon-32.png sizes=32x32 type=image/png><link rel=apple-touch-icon href=/img/icon/icon-180.png sizes=180x180><meta name=theme-color content="#ffffff" media="(prefers-color-scheme: light)"><meta name=theme-color content="#121212" media="(prefers-color-scheme: dark)"><script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-XXXXXXXXXX")</script></head><body><header id=site-header><div id=site-header-brand><a href=/>fake website</a></div><div id=site-header-controls><div class=dropdown><button class=dropdown-btn aria-haspopup=menu aria-label="theme selector">
-<i class="icon icon-brightness"></i>
-<i class="icon icon-select"></i></button><ul role=menu class=dropdown-menu><li role=menuitem><button class=color-scheme data-value=light><i class="icon icon-light-mode"></i> Light</button></li><li role=menuitem><button class=color-scheme data-value=dark><i class="icon icon-dark-mode"></i> Dark &nbsp;</button></li><li role=menuitem><button class=color-scheme data-value=night><i class="icon icon-night-mode"></i> Night</button></li></ul></div><div class=dropdown><button class=dropdown-btn aria-haspopup=menu aria-label="language selector">
-<i class="icon icon-translate"></i>
-<i class="icon icon-select"></i></button><ul role=menu class=dropdown-menu><li role=menuitem><a href=#>English</a></li></ul></div></div><div id=site-header-menu><nav><ul><li><a href=/><i class='icon icon-home'></i>Home</a></li><li><a href=/docs class=active><i class='icon icon-book'></i>Documentation</a></li><li><a href=/admission><i class='icon icon-file'></i>Admission</a></li><li><a href=/diploma><i class='icon icon-file'></i>Diploma</a></li></ul></nav></div><div id=site-header-search></div></header><div id=site-main-content-wrapper><aside id=sidebar><span class=btn-close><i class="icon icon-close"></i></span><div class=sticky><strong class=sidebar-section>Documentation</strong>
-<a class=sidebar-link href=/docs/overview/>Overview
-</a><strong class=sidebar-section>Assignments 1</strong>
-<a class="sidebar-link current" href=/docs/command-line-documentation/>Command Line & Documentation
-</a><strong class=sidebar-section>Assignments 2</strong>
-<a class=sidebar-link href=/docs/static-personal-blog-website/>Static Personal Blog Website</a></div></aside><main><article id=article><nav id=article-nav><button id=article-nav-menu-btn><i class="icon icon-menu"></i> On this section</button>
-<button id=article-nav-toc-btn><i class="icon icon-toc"></i> On this page</button></nav><header id=article-header><h1>Command Line & Documentation</h1></header><div id=article-content><h1 id=matrix-multiplication-project-report>Matrix Multiplication Project Report</h1><p><strong>Student Name</strong>: Li Shangyuan<br><strong>Student ID</strong>: ZY2457216
-<strong>Submission Date</strong>: 2025-03-26</p><h2 id=system-configuration>System Configuration</h2><table><thead><tr><th><strong>Component</strong></th><th><strong>Details</strong></th></tr></thead><tbody><tr><td>CPU Model</td><td>Apple M3</td></tr><tr><td>Memory Size</td><td>16 GB</td></tr><tr><td>Operating System Version</td><td>macOS 15.3.2</td></tr><tr><td>Compiler Version</td><td>Apple clang version 16.0.0 (clang-1600.0.26.6)</td></tr><tr><td>Python Version</td><td>Python 3.12.8</td></tr></tbody></table><h2 id=implementation-details>Implementation Details</h2><h3 id=c-language-implementation>C Language Implementation</h3><ul><li><strong>Source Code</strong>(<code>matrix.c</code>):</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl><span class=cp>#include</span> <span class=cpf>&lt;stdio.h&gt;</span><span class=cp>
-</span></span></span><span class=line><span class=cl><span class=cp>#include</span> <span class=cpf>&lt;time.h&gt;</span><span class=cp>
-</span></span></span><span class=line><span class=cl><span class=cp></span>
-</span></span><span class=line><span class=cl><span class=c1>// Define the dimensions of the matrices
-</span></span></span><span class=line><span class=cl><span class=c1></span><span class=cp>#define ROW1 3
-</span></span></span><span class=line><span class=cl><span class=cp>#define COL1 3
-</span></span></span><span class=line><span class=cl><span class=cp>#define ROW2 3
-</span></span></span><span class=line><span class=cl><span class=cp>#define COL2 3
-</span></span></span><span class=line><span class=cl><span class=cp></span>
-</span></span><span class=line><span class=cl><span class=c1>// Function to perform matrix multiplication
-</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kt>void</span> <span class=nf>matrix_multiply</span><span class=p>(</span><span class=kt>int</span> <span class=n>mat1</span><span class=p>[</span><span class=n>ROW1</span><span class=p>][</span><span class=n>COL1</span><span class=p>],</span> <span class=kt>int</span> <span class=n>mat2</span><span class=p>[</span><span class=n>ROW2</span><span class=p>][</span><span class=n>COL2</span><span class=p>],</span> <span class=kt>int</span> <span class=n>result</span><span class=p>[</span><span class=n>ROW1</span><span class=p>][</span><span class=n>COL2</span><span class=p>])</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=c1>// Iterate through rows of the first matrix
-</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=k>for</span> <span class=p>(</span><span class=kt>int</span> <span class=n>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=n>i</span> <span class=o>&lt;</span> <span class=n>ROW1</span><span class=p>;</span> <span class=n>i</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=c1>// Iterate through columns of the second matrix
-</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=k>for</span> <span class=p>(</span><span class=kt>int</span> <span class=n>j</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=n>j</span> <span class=o>&lt;</span> <span class=n>COL2</span><span class=p>;</span> <span class=n>j</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=c1>// Initialize the result element to 0
-</span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=n>result</span><span class=p>[</span><span class=n>i</span><span class=p>][</span><span class=n>j</span><span class=p>]</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>            <span class=c1>// Iterate through columns of the first matrix (or rows of the second matrix)
-</span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=k>for</span> <span class=p>(</span><span class=kt>int</span> <span class=n>k</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=n>k</span> <span class=o>&lt;</span> <span class=n>COL1</span><span class=p>;</span> <span class=n>k</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>                <span class=c1>// Multiply corresponding elements and add to the result
-</span></span></span><span class=line><span class=cl><span class=c1></span>                <span class=n>result</span><span class=p>[</span><span class=n>i</span><span class=p>][</span><span class=n>j</span><span class=p>]</span> <span class=o>+=</span> <span class=n>mat1</span><span class=p>[</span><span class=n>i</span><span class=p>][</span><span class=n>k</span><span class=p>]</span> <span class=o>*</span> <span class=n>mat2</span><span class=p>[</span><span class=n>k</span><span class=p>][</span><span class=n>j</span><span class=p>];</span>
-</span></span><span class=line><span class=cl>            <span class=p>}</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl><span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=kt>int</span> <span class=nf>main</span><span class=p>()</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=c1>// Define the first matrix
-</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=kt>int</span> <span class=n>mat1</span><span class=p>[</span><span class=n>ROW1</span><span class=p>][</span><span class=n>COL1</span><span class=p>]</span> <span class=o>=</span> <span class=p>{{</span><span class=mi>1</span><span class=p>,</span> <span class=mi>2</span><span class=p>,</span> <span class=mi>3</span><span class=p>},</span> <span class=p>{</span><span class=mi>4</span><span class=p>,</span> <span class=mi>5</span><span class=p>,</span> <span class=mi>6</span><span class=p>},</span> <span class=p>{</span><span class=mi>7</span><span class=p>,</span> <span class=mi>8</span><span class=p>,</span> <span class=mi>9</span><span class=p>}};</span>
-</span></span><span class=line><span class=cl>    <span class=c1>// Define the second matrix
-</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=kt>int</span> <span class=n>mat2</span><span class=p>[</span><span class=n>ROW2</span><span class=p>][</span><span class=n>COL2</span><span class=p>]</span> <span class=o>=</span> <span class=p>{{</span><span class=mi>9</span><span class=p>,</span> <span class=mi>8</span><span class=p>,</span> <span class=mi>7</span><span class=p>},</span> <span class=p>{</span><span class=mi>6</span><span class=p>,</span> <span class=mi>5</span><span class=p>,</span> <span class=mi>4</span><span class=p>},</span> <span class=p>{</span><span class=mi>3</span><span class=p>,</span> <span class=mi>2</span><span class=p>,</span> <span class=mi>1</span><span class=p>}};</span>
-</span></span><span class=line><span class=cl>    <span class=c1>// Initialize the result matrix
-</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=kt>int</span> <span class=n>result</span><span class=p>[</span><span class=n>ROW1</span><span class=p>][</span><span class=n>COL2</span><span class=p>];</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=c1>// Record the start time
-</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=kt>clock_t</span> <span class=n>start</span> <span class=o>=</span> <span class=nf>clock</span><span class=p>();</span>
-</span></span><span class=line><span class=cl>    <span class=c1>// Perform matrix multiplication
-</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=nf>matrix_multiply</span><span class=p>(</span><span class=n>mat1</span><span class=p>,</span> <span class=n>mat2</span><span class=p>,</span> <span class=n>result</span><span class=p>);</span>
-</span></span><span class=line><span class=cl>    <span class=c1>// Record the end time
-</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=kt>clock_t</span> <span class=n>end</span> <span class=o>=</span> <span class=nf>clock</span><span class=p>();</span>
-</span></span><span class=line><span class=cl>    <span class=c1>// Calculate the time taken
-</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=kt>double</span> <span class=n>time_taken</span> <span class=o>=</span> <span class=p>((</span><span class=kt>double</span><span class=p>)(</span><span class=n>end</span> <span class=o>-</span> <span class=n>start</span><span class=p>))</span> <span class=o>/</span> <span class=n>CLOCKS_PER_SEC</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=c1>// Print the execution time of matrix multiplication in C
-</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=nf>printf</span><span class=p>(</span><span class=s>&#34;C language matrix multiplication execution time: %f seconds</span><span class=se>\n</span><span class=s>&#34;</span><span class=p>,</span> <span class=n>time_taken</span><span class=p>);</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=c1>// Print the result matrix
-</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=nf>printf</span><span class=p>(</span><span class=s>&#34;Result matrix:</span><span class=se>\n</span><span class=s>&#34;</span><span class=p>);</span>
-</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=p>(</span><span class=kt>int</span> <span class=n>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=n>i</span> <span class=o>&lt;</span> <span class=n>ROW1</span><span class=p>;</span> <span class=n>i</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=k>for</span> <span class=p>(</span><span class=kt>int</span> <span class=n>j</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=n>j</span> <span class=o>&lt;</span> <span class=n>COL2</span><span class=p>;</span> <span class=n>j</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=nf>printf</span><span class=p>(</span><span class=s>&#34;%d &#34;</span><span class=p>,</span> <span class=n>result</span><span class=p>[</span><span class=n>i</span><span class=p>][</span><span class=n>j</span><span class=p>]);</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span>
-</span></span><span class=line><span class=cl>        <span class=nf>printf</span><span class=p>(</span><span class=s>&#34;</span><span class=se>\n</span><span class=s>&#34;</span><span class=p>);</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
-</span></span><span class=line><span class=cl><span class=p>}</span>
-</span></span></code></pre></div><ul><li><strong>Compilation Command‌e</strong>:</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>gcc -o matrix_c matrix.c
-</span></span></code></pre></div><ul><li><strong>Execution Command</strong>:</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>./matrix_c
-</span></span></code></pre></div><p>result:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=o>(</span>base<span class=o>)</span> -&gt;  bst2025 gcc matrix.c -o matrix 
-</span></span><span class=line><span class=cl><span class=o>(</span>base<span class=o>)</span> -&gt;  bst2025 ./matrix
-</span></span><span class=line><span class=cl>C Execution <span class=nb>time</span> of matrix multiplication: 0.000006 seconds
-</span></span><span class=line><span class=cl>outcome matrix:
-</span></span><span class=line><span class=cl><span class=m>30</span> <span class=m>24</span> <span class=m>18</span>
-</span></span><span class=line><span class=cl><span class=m>84</span> <span class=m>69</span> <span class=m>54</span>
-</span></span><span class=line><span class=cl><span class=m>138</span> <span class=m>114</span> <span class=m>90</span>
-</span></span></code></pre></div><h3 id=python-language-implementation>Python Language Implementation</h3><ul><li><strong>Source Code</strong>(<code>matrix.py</code>):</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=kn>import</span> <span class=nn>time</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=c1># Define the first matrix</span>
-</span></span><span class=line><span class=cl><span class=n>mat1</span> <span class=o>=</span> <span class=p>[[</span><span class=mi>1</span><span class=p>,</span> <span class=mi>2</span><span class=p>,</span> <span class=mi>3</span><span class=p>],</span> <span class=p>[</span><span class=mi>4</span><span class=p>,</span> <span class=mi>5</span><span class=p>,</span> <span class=mi>6</span><span class=p>],</span> <span class=p>[</span><span class=mi>7</span><span class=p>,</span> <span class=mi>8</span><span class=p>,</span> <span class=mi>9</span><span class=p>]]</span>
-</span></span><span class=line><span class=cl><span class=c1># Define the second matrix</span>
-</span></span><span class=line><span class=cl><span class=n>mat2</span> <span class=o>=</span> <span class=p>[[</span><span class=mi>9</span><span class=p>,</span> <span class=mi>8</span><span class=p>,</span> <span class=mi>7</span><span class=p>],</span> <span class=p>[</span><span class=mi>6</span><span class=p>,</span> <span class=mi>5</span><span class=p>,</span> <span class=mi>4</span><span class=p>],</span> <span class=p>[</span><span class=mi>3</span><span class=p>,</span> <span class=mi>2</span><span class=p>,</span> <span class=mi>1</span><span class=p>]]</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=c1># Initialize the result matrix with all elements set to 0</span>
-</span></span><span class=line><span class=cl><span class=n>result</span> <span class=o>=</span> <span class=p>[[</span><span class=mi>0</span> <span class=k>for</span> <span class=n>_</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=nb>len</span><span class=p>(</span><span class=n>mat2</span><span class=p>[</span><span class=mi>0</span><span class=p>]))]</span> <span class=k>for</span> <span class=n>_</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=nb>len</span><span class=p>(</span><span class=n>mat1</span><span class=p>))]</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=c1># Record the start time</span>
-</span></span><span class=line><span class=cl><span class=n>start</span> <span class=o>=</span> <span class=n>time</span><span class=o>.</span><span class=n>time</span><span class=p>()</span>
-</span></span><span class=line><span class=cl><span class=c1># Iterate through rows of the first matrix</span>
-</span></span><span class=line><span class=cl><span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=nb>len</span><span class=p>(</span><span class=n>mat1</span><span class=p>)):</span>
-</span></span><span class=line><span class=cl>    <span class=c1># Iterate through columns of the second matrix</span>
-</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=n>j</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=nb>len</span><span class=p>(</span><span class=n>mat2</span><span class=p>[</span><span class=mi>0</span><span class=p>])):</span>
-</span></span><span class=line><span class=cl>        <span class=c1># Iterate through columns of the first matrix (or rows of the second matrix)</span>
-</span></span><span class=line><span class=cl>        <span class=k>for</span> <span class=n>k</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=nb>len</span><span class=p>(</span><span class=n>mat2</span><span class=p>)):</span>
-</span></span><span class=line><span class=cl>            <span class=c1># Multiply corresponding elements and add to the result</span>
-</span></span><span class=line><span class=cl>            <span class=n>result</span><span class=p>[</span><span class=n>i</span><span class=p>][</span><span class=n>j</span><span class=p>]</span> <span class=o>+=</span> <span class=n>mat1</span><span class=p>[</span><span class=n>i</span><span class=p>][</span><span class=n>k</span><span class=p>]</span> <span class=o>*</span> <span class=n>mat2</span><span class=p>[</span><span class=n>k</span><span class=p>][</span><span class=n>j</span><span class=p>]</span>
-</span></span><span class=line><span class=cl><span class=c1># Record the end time</span>
-</span></span><span class=line><span class=cl><span class=n>end</span> <span class=o>=</span> <span class=n>time</span><span class=o>.</span><span class=n>time</span><span class=p>()</span>
-</span></span><span class=line><span class=cl><span class=c1># Calculate the time taken</span>
-</span></span><span class=line><span class=cl><span class=n>time_taken</span> <span class=o>=</span> <span class=n>end</span> <span class=o>-</span> <span class=n>start</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=c1># Print the execution time of matrix multiplication in Python</span>
-</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=sa>f</span><span class=s2>&#34;Python matrix multiplication execution time: </span><span class=si>{</span><span class=n>time_taken</span><span class=si>}</span><span class=s2> seconds&#34;</span><span class=p>)</span>
-</span></span><span class=line><span class=cl><span class=c1># Print the result matrix</span>
-</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=s2>&#34;Result matrix:&#34;</span><span class=p>)</span>
-</span></span><span class=line><span class=cl><span class=k>for</span> <span class=n>row</span> <span class=ow>in</span> <span class=n>result</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=n>row</span><span class=p>)</span>
-</span></span></code></pre></div><ul><li><strong>Execution Command</strong>:</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>python matrix.py
-</span></span></code></pre></div><p>result:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=o>(</span>base<span class=o>)</span> -&gt;  bst2025 /opt/homebrew/bin/python3 /Users/macair/Desktop/bst2025/matrix.py
-</span></span><span class=line><span class=cl>Python Execution <span class=nb>time</span> of matrix multiplication: 6.198883056640625e-06 seconds
-</span></span><span class=line><span class=cl>outcome matrix:
-</span></span><span class=line><span class=cl><span class=o>[</span>30, 24, 18<span class=o>]</span>
-</span></span><span class=line><span class=cl><span class=o>[</span>84, 69, 54<span class=o>]</span>
-</span></span><span class=line><span class=cl><span class=o>[</span>138, 114, 90<span class=o>]</span>
-</span></span></code></pre></div><h2 id=algorithm-verification>Algorithm Verification</h2><ul><li><strong>Correctness</strong>: Verify the results of 2x3 and 3x2 matrix multiplication:</li><li>Manual calculation:</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-text data-lang=text><span class=line><span class=cl>first row:
-</span></span><span class=line><span class=cl>result[0][0] = 1*9 + 2*6 + 3*3 = 9 + 12 + 9 = 30
-</span></span><span class=line><span class=cl>result[0][1] = 1*8 + 2*5 + 3*2 = 8 + 10 + 6 = 24
-</span></span><span class=line><span class=cl>result[0][2] = 1*7 + 2*4 + 3*1 = 7 + 8 + 3 = 18
-</span></span><span class=line><span class=cl>second row:
-</span></span><span class=line><span class=cl>result[1][0] = 4*9 + 5*6 + 6*3 = 36 + 30 + 18 = 84
-</span></span><span class=line><span class=cl>result[1][1] = 4*8 + 5*5 + 6*2 = 32 + 25 + 12 = 69
-</span></span><span class=line><span class=cl>result[1][2] = 4*7 + 5*4 + 6*1 = 28 + 20 + 6 = 54
-</span></span><span class=line><span class=cl>third row:
-</span></span><span class=line><span class=cl>result[2][0] = 7*9 + 8*6 + 9*3 = 63 + 48 + 27 = 138
-</span></span><span class=line><span class=cl>result[2][1] = 7*8 + 8*5 + 9*2 = 56 + 40 + 18 = 114
-</span></span><span class=line><span class=cl>result[2][2] = 7*7 + 8*4 + 9*1 = 49 + 32 + 9 = 90
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>result = [[30, 24, 18], [84, 69, 54], [138, 114, 90]]
-</span></span></code></pre></div><h2 id=performance-analysis-bonus>Performance Analysis [bonus]</h2><ul><li><strong>Execution Times</strong>:</li></ul><p>For 3*3 matrix multiplication:</p><table><thead><tr><th>Programming Language</th><th>Execution Time (seconds)</th></tr></thead><tbody><tr><td>C</td><td>0.0000006</td></tr><tr><td>Python</td><td>6.9141387939453125e-06</td></tr></tbody></table><p>For huge (1000*1000) matrix multiplication:</p><table><thead><tr><th>Programming Language</th><th>Execution Time (seconds)</th><th>Performance Characteristics</th></tr></thead><tbody><tr><td>C++</td><td>0.146</td><td>Manual memory management, loop optimization</td></tr><tr><td>Pure Python</td><td>81.21</td><td>Not suitable for practical computation</td></tr><tr><td>Numpy (OpenBLAS)</td><td>0.008</td><td>Multithreaded parallelism, optimized C backend</td></tr><tr><td>Numba JT</td><td>0.373</td><td>Near-native performance, no manual compilation required</td></tr></tbody></table><ul><li><strong>Analysis</strong>:
-The performance comparison highlights significant differences between C and Python for matrix multiplication:</li></ul><ol><li>Execution Model:<ul><li>C (Compiled): Directly translated to machine code, eliminating runtime interpretation overhead. This allows for efficient CPU utilization and minimizes latency.</li><li>Python (Interpreted): Requires dynamic type checking, bytecode translation, and line-by-line execution, introducing inherent inefficiencies for compute-heavy tasks.</li></ul></li><li>Memory Management:<ul><li>C: Provides explicit control over memory allocation (e.g. stack/heap usage), enabling contiguous storage and optimized cache locality. Arrays are stored in contiguous memory blocks, reducing memory access latency.</li><li>Python: Relies on dynamic memory allocation and garbage collection, which incur overhead. List-of-lists structures introduce non-contiguous memory access, degrading performance.</li></ul></li><li>Type Checking:<ul><li>C: Static typing ensures type safety at compile time, avoiding runtime type checks.</li><li>Python: Dynamic typing forces runtime type validation, slowing down arithmetic operations.</li></ul></li><li>Loop Overhead:<ul><li>Python’s for-loops are significantly slower than C’s optimized loops due to interpreter overhead. Matrix multiplication involves nested loops, amplifying this gap.</li></ul></li></ol><p>Result: C outperforms Python by 11.5x for this computation, aligning with the expected behavior of compiled vs. interpreted languages.</p><h2 id=conclusion>Conclusion</h2><ol><li>This project demonstrated the following key learnings:
-Algorithm Validation:<ul><li>Both C and Python implementations correctly computed matrix multiplication, verified through manual calculations and output comparisons.</li></ul></li><li>Performance Optimization:<ul><li>Compiled languages like C are ideal for performance-critical tasks due to direct hardware interaction and minimal runtime overhead.</li><li>Interpreted languages like Python offer convenience but struggle with computational efficiency for large-scale operations.</li></ul></li><li>Memory and Execution Models:<ul><li>Explicit memory management in C reduces overhead, while Python’s dynamic features simplify development at the cost of performance.</li></ul></li><li>Documentation and Reproducibility:<ul><li>Markdown effectively documented code, results, and analysis, ensuring clarity and reproducibility.</li><li>Command-line tools (e.g. GCC for C, Python interpreter) streamlined execution and timing measurements.</li></ul></li></ol><h2 id=references>References</h2><p><a href="https://github.com/jlevy/the-art-of-command-line?tab=readme-ov-file" target=_blank>The art of command line</a></p><p><a href=https://www.markdownguide.org/getting-started/ target=_blank>Markdown guide book</a></p></div><footer id=article-footer><time id=article-last-updated datetime=2025-04-21><i class="icon icon-calendar"></i>&nbsp;Last updated: 2025-04-21</time>
-<a id=article-prev-link href=/docs/overview/><i class="icon icon-prev icon-colored"></i> Prev</a>
-<a id=article-next-link href=/docs/static-personal-blog-website/>Next <i class="icon icon-next icon-colored"></i></a></footer></article><aside id=toc><span class=btn-close><i class="icon icon-close"></i></span><div class=sticky><strong><i class="icon icon-toc"></i> On this page</strong><nav id=TableOfContents><ul><li><a href=#system-configuration>System Configuration</a></li><li><a href=#implementation-details>Implementation Details</a><ul><li><a href=#c-language-implementation>C Language Implementation</a></li><li><a href=#python-language-implementation>Python Language Implementation</a></li></ul></li><li><a href=#algorithm-verification>Algorithm Verification</a></li><li><a href=#performance-analysis-bonus>Performance Analysis [bonus]</a></li><li><a href=#conclusion>Conclusion</a></li><li><a href=#references>References</a></li></ul></nav></div></aside></main></div><footer id=site-footer><div id=site-footer-copyright><a href=https://your.site target=_blank><i class="icon icon-copyright"></i> 2023 Your Name</a></div><div id=site-footer-social></div><div id=site-footer-fund></div><div id=site-footer-love>Made with <i class="icon icon-love icon-colored"></i> &nbsp;from&nbsp;<a href=https://docura.github.io/ target=_blank>Docura</a></div></footer><script type=text/javascript src=/js/base.min.js></script><script src=/js/component/docsearch.min.js></script><script type=application/javascript>docsearch({container:"#site-header-search",appId:"",indexName:"",apiKey:""})</script><script type=application/javascript>"serviceWorker"in navigator&&navigator.serviceWorker.register("/sw.js?2025-05-06").catch(function(e){console.error("ServiceWorker registration failed: ",e)})</script></body></html>
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="fake wabsite">
+<meta name="author" content="Your Name">
+
+<title>Command Line &amp; Documentation · fake website</title>
+
+<link rel="canonical" href="/docs/command-line-documentation/">
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/scss/base.css" integrity="">
+
+
+
+<link rel="stylesheet" href="/scss/theme/default.css" integrity="">
+
+
+
+  <link rel="preconnect" href="https://-dsn.algolia.net" crossorigin />
+  
+  <link rel="stylesheet" href="/scss/component/docsearch.css" integrity=""/>
+
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/img/icon/favicon.ico">
+<link rel="icon" href="/img/icon/icon-16.png" sizes="16x16" type="image/png">
+<link rel="icon" href="/img/icon/icon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/img/icon/icon-180.png" sizes="180x180">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+
+  
+
+  </head>
+  <body>
+    <header id="site-header">
+  
+  <div id="site-header-brand">
+    <a href="/">fake website</a>
+  </div>
+
+  
+  <div id="site-header-controls">
+    
+    <div class="dropdown">
+      <button class="dropdown-btn" aria-haspopup="menu" aria-label="theme selector">
+        <i class="icon icon-brightness"></i>
+        <i class="icon icon-select"></i>
+      </button>
+      <ul role="menu" class="dropdown-menu">
+        <li role="menuitem"><button class="color-scheme" data-value="light"><i class="icon icon-light-mode"></i> Light</button></li>
+        <li role="menuitem"><button class="color-scheme" data-value="dark"><i class="icon icon-dark-mode"></i> Dark &nbsp;</button></li>
+        <li role="menuitem"><button class="color-scheme" data-value="night"><i class="icon icon-night-mode"></i> Night</button></li>
+      </ul>
+    </div>
+
+    
+    <div class="dropdown">
+      <button class="dropdown-btn" aria-haspopup="menu" aria-label="language selector">
+        <i class="icon icon-translate"></i>
+        <i class="icon icon-select"></i>
+      </button>
+      <ul role="menu" class="dropdown-menu">
+        
+          <li role="menuitem"><a href="#">English</a></li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+  <div id="site-header-menu">
+    <nav>
+      <ul>
+        
+        
+        
+          
+          <li><a href="/" ><i class='icon icon-home'></i>Home</a></li>
+        
+          
+          <li><a href="/docs"  class="active"><i class='icon icon-book'></i>Documentation</a></li>
+        
+          
+          <li><a href="/admission" ><i class='icon icon-file'></i>Admission</a></li>
+        
+          
+          <li><a href="/diploma" ><i class='icon icon-file'></i>Diploma</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+
+  
+  <div id="site-header-search"></div>
+</header>
+    
+<div id="site-main-content-wrapper">
+  
+  
+    
+
+
+<aside id="sidebar">
+  <span class="btn-close"><i class="icon icon-close"></i></span>
+
+  <div class="sticky"><strong class="sidebar-section">Documentation</strong>
+          
+          <a class="sidebar-link " href="/docs/overview/">
+            
+              Overview
+            
+          </a>
+
+        <strong class="sidebar-section">Assignments 1</strong>
+          
+          <a class="sidebar-link current" href="/docs/command-line-documentation/">
+            
+              Command Line &amp; Documentation
+            
+          </a>
+
+        <strong class="sidebar-section">Assignments 2</strong>
+          
+          <a class="sidebar-link " href="/docs/static-personal-blog-website/">
+            
+              Static Personal Blog Website
+            
+          </a>
+
+        
+  </div>
+</aside>
+
+  
+  <main>
+    <article id="article">
+      <nav id="article-nav">
+  <button id="article-nav-menu-btn"><i class="icon icon-menu"></i> On this section</button>
+  <button id="article-nav-toc-btn"><i class="icon icon-toc"></i> On this page</button>
+</nav>
+      <header id="article-header">
+  <h1>Command Line &amp; Documentation</h1>
+</header>
+      <div id="article-content">
+        
+        
+        <h1 id="matrix-multiplication-project-report">Matrix Multiplication Project Report</h1>
+<p><strong>Student Name</strong>: Li Shangyuan<br>
+<strong>Student ID</strong>: ZY2457216
+<strong>Submission Date</strong>: 2025-03-26</p>
+<h2 id="system-configuration">System Configuration</h2>
+<table>
+  <thead>
+      <tr>
+          <th><strong>Component</strong></th>
+          <th><strong>Details</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>CPU Model</td>
+          <td>Apple M3</td>
+      </tr>
+      <tr>
+          <td>Memory Size</td>
+          <td>16 GB</td>
+      </tr>
+      <tr>
+          <td>Operating System Version</td>
+          <td>macOS 15.3.2</td>
+      </tr>
+      <tr>
+          <td>Compiler Version</td>
+          <td>Apple clang version 16.0.0 (clang-1600.0.26.6)</td>
+      </tr>
+      <tr>
+          <td>Python Version</td>
+          <td>Python 3.12.8</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="implementation-details">Implementation Details</h2>
+<h3 id="c-language-implementation">C Language Implementation</h3>
+<ul>
+<li><strong>Source Code</strong>(<code>matrix.c</code>):</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;time.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Define the dimensions of the matrices
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="cp">#define ROW1 3
+</span></span></span><span class="line"><span class="cl"><span class="cp">#define COL1 3
+</span></span></span><span class="line"><span class="cl"><span class="cp">#define ROW2 3
+</span></span></span><span class="line"><span class="cl"><span class="cp">#define COL2 3
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Function to perform matrix multiplication
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">matrix_multiply</span><span class="p">(</span><span class="kt">int</span> <span class="n">mat1</span><span class="p">[</span><span class="n">ROW1</span><span class="p">][</span><span class="n">COL1</span><span class="p">],</span> <span class="kt">int</span> <span class="n">mat2</span><span class="p">[</span><span class="n">ROW2</span><span class="p">][</span><span class="n">COL2</span><span class="p">],</span> <span class="kt">int</span> <span class="n">result</span><span class="p">[</span><span class="n">ROW1</span><span class="p">][</span><span class="n">COL2</span><span class="p">])</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Iterate through rows of the first matrix
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">ROW1</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// Iterate through columns of the second matrix
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">COL2</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// Initialize the result element to 0
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="n">result</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// Iterate through columns of the first matrix (or rows of the second matrix)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">COL1</span><span class="p">;</span> <span class="n">k</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">// Multiply corresponding elements and add to the result
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="n">result</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">+=</span> <span class="n">mat1</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">k</span><span class="p">]</span> <span class="o">*</span> <span class="n">mat2</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">j</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Define the first matrix
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">int</span> <span class="n">mat1</span><span class="p">[</span><span class="n">ROW1</span><span class="p">][</span><span class="n">COL1</span><span class="p">]</span> <span class="o">=</span> <span class="p">{{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">},</span> <span class="p">{</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">},</span> <span class="p">{</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">}};</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Define the second matrix
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">int</span> <span class="n">mat2</span><span class="p">[</span><span class="n">ROW2</span><span class="p">][</span><span class="n">COL2</span><span class="p">]</span> <span class="o">=</span> <span class="p">{{</span><span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">},</span> <span class="p">{</span><span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">},</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">}};</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Initialize the result matrix
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">int</span> <span class="n">result</span><span class="p">[</span><span class="n">ROW1</span><span class="p">][</span><span class="n">COL2</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Record the start time
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">clock_t</span> <span class="n">start</span> <span class="o">=</span> <span class="nf">clock</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Perform matrix multiplication
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">matrix_multiply</span><span class="p">(</span><span class="n">mat1</span><span class="p">,</span> <span class="n">mat2</span><span class="p">,</span> <span class="n">result</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Record the end time
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">clock_t</span> <span class="n">end</span> <span class="o">=</span> <span class="nf">clock</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Calculate the time taken
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">double</span> <span class="n">time_taken</span> <span class="o">=</span> <span class="p">((</span><span class="kt">double</span><span class="p">)(</span><span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="p">))</span> <span class="o">/</span> <span class="n">CLOCKS_PER_SEC</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Print the execution time of matrix multiplication in C
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;C language matrix multiplication execution time: %f seconds</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">time_taken</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Print the result matrix
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Result matrix:</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">ROW1</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">COL2</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%d &#34;</span><span class="p">,</span> <span class="n">result</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><ul>
+<li><strong>Compilation Command‌e</strong>:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gcc -o matrix_c matrix.c
+</span></span></code></pre></div><ul>
+<li><strong>Execution Command</strong>:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./matrix_c
+</span></span></code></pre></div><p>result:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">(</span>base<span class="o">)</span> -&gt;  bst2025 gcc matrix.c -o matrix 
+</span></span><span class="line"><span class="cl"><span class="o">(</span>base<span class="o">)</span> -&gt;  bst2025 ./matrix
+</span></span><span class="line"><span class="cl">C Execution <span class="nb">time</span> of matrix multiplication: 0.000006 seconds
+</span></span><span class="line"><span class="cl">outcome matrix:
+</span></span><span class="line"><span class="cl"><span class="m">30</span> <span class="m">24</span> <span class="m">18</span>
+</span></span><span class="line"><span class="cl"><span class="m">84</span> <span class="m">69</span> <span class="m">54</span>
+</span></span><span class="line"><span class="cl"><span class="m">138</span> <span class="m">114</span> <span class="m">90</span>
+</span></span></code></pre></div><h3 id="python-language-implementation">Python Language Implementation</h3>
+<ul>
+<li><strong>Source Code</strong>(<code>matrix.py</code>):</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">time</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Define the first matrix</span>
+</span></span><span class="line"><span class="cl"><span class="n">mat1</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Define the second matrix</span>
+</span></span><span class="line"><span class="cl"><span class="n">mat2</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Initialize the result matrix with all elements set to 0</span>
+</span></span><span class="line"><span class="cl"><span class="n">result</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mat2</span><span class="p">[</span><span class="mi">0</span><span class="p">]))]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mat1</span><span class="p">))]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Record the start time</span>
+</span></span><span class="line"><span class="cl"><span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Iterate through rows of the first matrix</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mat1</span><span class="p">)):</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># Iterate through columns of the second matrix</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mat2</span><span class="p">[</span><span class="mi">0</span><span class="p">])):</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># Iterate through columns of the first matrix (or rows of the second matrix)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mat2</span><span class="p">)):</span>
+</span></span><span class="line"><span class="cl">            <span class="c1"># Multiply corresponding elements and add to the result</span>
+</span></span><span class="line"><span class="cl">            <span class="n">result</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">+=</span> <span class="n">mat1</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">k</span><span class="p">]</span> <span class="o">*</span> <span class="n">mat2</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Record the end time</span>
+</span></span><span class="line"><span class="cl"><span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Calculate the time taken</span>
+</span></span><span class="line"><span class="cl"><span class="n">time_taken</span> <span class="o">=</span> <span class="n">end</span> <span class="o">-</span> <span class="n">start</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Print the execution time of matrix multiplication in Python</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Python matrix multiplication execution time: </span><span class="si">{</span><span class="n">time_taken</span><span class="si">}</span><span class="s2"> seconds&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Print the result matrix</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Result matrix:&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">result</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</span></span></code></pre></div><ul>
+<li><strong>Execution Command</strong>:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">python matrix.py
+</span></span></code></pre></div><p>result:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">(</span>base<span class="o">)</span> -&gt;  bst2025 /opt/homebrew/bin/python3 /Users/macair/Desktop/bst2025/matrix.py
+</span></span><span class="line"><span class="cl">Python Execution <span class="nb">time</span> of matrix multiplication: 6.198883056640625e-06 seconds
+</span></span><span class="line"><span class="cl">outcome matrix:
+</span></span><span class="line"><span class="cl"><span class="o">[</span>30, 24, 18<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>84, 69, 54<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>138, 114, 90<span class="o">]</span>
+</span></span></code></pre></div><h2 id="algorithm-verification">Algorithm Verification</h2>
+<ul>
+<li><strong>Correctness</strong>: Verify the results of 2x3 and 3x2 matrix multiplication:</li>
+<li>Manual calculation:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">first row:
+</span></span><span class="line"><span class="cl">result[0][0] = 1*9 + 2*6 + 3*3 = 9 + 12 + 9 = 30
+</span></span><span class="line"><span class="cl">result[0][1] = 1*8 + 2*5 + 3*2 = 8 + 10 + 6 = 24
+</span></span><span class="line"><span class="cl">result[0][2] = 1*7 + 2*4 + 3*1 = 7 + 8 + 3 = 18
+</span></span><span class="line"><span class="cl">second row:
+</span></span><span class="line"><span class="cl">result[1][0] = 4*9 + 5*6 + 6*3 = 36 + 30 + 18 = 84
+</span></span><span class="line"><span class="cl">result[1][1] = 4*8 + 5*5 + 6*2 = 32 + 25 + 12 = 69
+</span></span><span class="line"><span class="cl">result[1][2] = 4*7 + 5*4 + 6*1 = 28 + 20 + 6 = 54
+</span></span><span class="line"><span class="cl">third row:
+</span></span><span class="line"><span class="cl">result[2][0] = 7*9 + 8*6 + 9*3 = 63 + 48 + 27 = 138
+</span></span><span class="line"><span class="cl">result[2][1] = 7*8 + 8*5 + 9*2 = 56 + 40 + 18 = 114
+</span></span><span class="line"><span class="cl">result[2][2] = 7*7 + 8*4 + 9*1 = 49 + 32 + 9 = 90
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">result = [[30, 24, 18], [84, 69, 54], [138, 114, 90]]
+</span></span></code></pre></div><h2 id="performance-analysis-bonus">Performance Analysis [bonus]</h2>
+<ul>
+<li><strong>Execution Times</strong>:</li>
+</ul>
+<p>For 3*3 matrix multiplication:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Programming Language</th>
+          <th>Execution Time (seconds)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>C</td>
+          <td>0.0000006</td>
+      </tr>
+      <tr>
+          <td>Python</td>
+          <td>6.9141387939453125e-06</td>
+      </tr>
+  </tbody>
+</table>
+<p>For huge (1000*1000) matrix multiplication:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Programming Language</th>
+          <th>Execution Time (seconds)</th>
+          <th>Performance Characteristics</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>C++</td>
+          <td>0.146</td>
+          <td>Manual memory management, loop optimization</td>
+      </tr>
+      <tr>
+          <td>Pure Python</td>
+          <td>81.21</td>
+          <td>Not suitable for practical computation</td>
+      </tr>
+      <tr>
+          <td>Numpy (OpenBLAS)</td>
+          <td>0.008</td>
+          <td>Multithreaded parallelism, optimized C backend</td>
+      </tr>
+      <tr>
+          <td>Numba JT</td>
+          <td>0.373</td>
+          <td>Near-native performance, no manual compilation required</td>
+      </tr>
+  </tbody>
+</table>
+<ul>
+<li><strong>Analysis</strong>:
+The performance comparison highlights significant differences between C and Python for matrix multiplication:</li>
+</ul>
+<ol>
+<li>Execution Model:
+<ul>
+<li>C (Compiled): Directly translated to machine code, eliminating runtime interpretation overhead. This allows for efficient CPU utilization and minimizes latency.</li>
+<li>Python (Interpreted): Requires dynamic type checking, bytecode translation, and line-by-line execution, introducing inherent inefficiencies for compute-heavy tasks.</li>
+</ul>
+</li>
+<li>Memory Management:
+<ul>
+<li>C: Provides explicit control over memory allocation (e.g. stack/heap usage), enabling contiguous storage and optimized cache locality. Arrays are stored in contiguous memory blocks, reducing memory access latency.</li>
+<li>Python: Relies on dynamic memory allocation and garbage collection, which incur overhead. List-of-lists structures introduce non-contiguous memory access, degrading performance.</li>
+</ul>
+</li>
+<li>Type Checking:
+<ul>
+<li>C: Static typing ensures type safety at compile time, avoiding runtime type checks.</li>
+<li>Python: Dynamic typing forces runtime type validation, slowing down arithmetic operations.</li>
+</ul>
+</li>
+<li>Loop Overhead:
+<ul>
+<li>Python’s for-loops are significantly slower than C’s optimized loops due to interpreter overhead. Matrix multiplication involves nested loops, amplifying this gap.</li>
+</ul>
+</li>
+</ol>
+<p>Result: C outperforms Python by 11.5x for this computation, aligning with the expected behavior of compiled vs. interpreted languages.</p>
+<h2 id="conclusion">Conclusion</h2>
+<ol>
+<li>This project demonstrated the following key learnings:
+Algorithm Validation:
+<ul>
+<li>Both C and Python implementations correctly computed matrix multiplication, verified through manual calculations and output comparisons.</li>
+</ul>
+</li>
+<li>Performance Optimization:
+<ul>
+<li>Compiled languages like C are ideal for performance-critical tasks due to direct hardware interaction and minimal runtime overhead.</li>
+<li>Interpreted languages like Python offer convenience but struggle with computational efficiency for large-scale operations.</li>
+</ul>
+</li>
+<li>Memory and Execution Models:
+<ul>
+<li>Explicit memory management in C reduces overhead, while Python’s dynamic features simplify development at the cost of performance.</li>
+</ul>
+</li>
+<li>Documentation and Reproducibility:
+<ul>
+<li>Markdown effectively documented code, results, and analysis, ensuring clarity and reproducibility.</li>
+<li>Command-line tools (e.g. GCC for C, Python interpreter) streamlined execution and timing measurements.</li>
+</ul>
+</li>
+</ol>
+<h2 id="references">References</h2>
+<p><a href="https://github.com/jlevy/the-art-of-command-line?tab=readme-ov-file" target="_blank">The art of command line</a></p>
+<p><a href="https://www.markdownguide.org/getting-started/" target="_blank">Markdown guide book</a></p>
+
+      </div>
+      
+
+
+
+
+
+
+
+
+  
+  
+  
+        
+
+        
+          
+        
+
+      
+    
+        
+
+      
+    
+        
+
+        
+          
+        
+
+        
+        
+
+
+<footer id="article-footer">
+  <time id="article-last-updated" datetime="2025-04-21"><i class="icon icon-calendar"></i>&nbsp;Last updated: 2025-04-21</time>
+
+  
+    <a id="article-prev-link" href="/docs/overview/"><i class="icon icon-prev icon-colored"></i> Prev</a>
+  
+
+  
+    <a id="article-next-link"  href="/docs/static-personal-blog-website/">Next <i class="icon icon-next icon-colored"></i></a>
+  
+</footer>
+    </article>
+    <aside id="toc">
+  <span class="btn-close"><i class="icon icon-close"></i></span>
+  <div class="sticky">
+    <strong><i class="icon icon-toc"></i> On this page</strong>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#system-configuration">System Configuration</a></li>
+    <li><a href="#implementation-details">Implementation Details</a>
+      <ul>
+        <li><a href="#c-language-implementation">C Language Implementation</a></li>
+        <li><a href="#python-language-implementation">Python Language Implementation</a></li>
+      </ul>
+    </li>
+    <li><a href="#algorithm-verification">Algorithm Verification</a></li>
+    <li><a href="#performance-analysis-bonus">Performance Analysis [bonus]</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+    <li><a href="#references">References</a></li>
+  </ul>
+</nav>
+  </div>
+</aside>
+  </main>
+</div>
+
+    <footer id="site-footer">
+  
+  <div id="site-footer-copyright">
+    <a href="https://your.site" target="_blank">
+      <i class="icon icon-copyright"></i> 2023 Your Name
+    </a>
+  </div>
+
+  
+  <div id="site-footer-social">
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+
+  
+  <div id="site-footer-fund">
+
+    
+
+    
+
+  </div>
+
+  
+  <div id="site-footer-love">
+    Made with <i class="icon icon-love icon-colored"></i> &nbsp;from&nbsp;<a href="https://docura.github.io/" target="_blank">Docura</a>
+  </div>
+</footer>
+    
+
+
+
+
+
+
+<script type="text/javascript" src="/js/base.min.js"></script>
+
+
+
+  
+  <script src="/js/component/docsearch.min.js"></script>
+  <script type="application/javascript">
+      docsearch({
+          container: '#site-header-search',
+          appId: '',
+          indexName: '',
+          apiKey: '',
+      });
+  </script>
+
+
+<script type="application/javascript">
+    if('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js?2025-05-06')
+            .catch(function(err) {console.error('ServiceWorker registration failed: ', err);});
+    }
+</script>
+  </body>
+</html>
