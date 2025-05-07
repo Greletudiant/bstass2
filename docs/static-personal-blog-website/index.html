@@ -164,7 +164,7 @@
         
         
         <h1 id="1-install-hugo">1 Install Hugo</h1>
-<p>Hugo is a static site generator that can convert Markdown files into HTML files. Before installing Hugo, you need to install Git, Go, and Dart Sass.</p>
+<p>Hugo is a static site generator that can convert Markdown files into HTML files. Before installing Hugo, we need to install Git, Go, and Dart Sass.</p>
 <h2 id="git">Git:</h2>
 <ul>
 <li>Build Hugo from source</li>
@@ -191,7 +191,7 @@
 <p>Once the above three software packages are installed, you can proceed to install Hugo. It is recommended to install the extended/deploy edition.</p>
 <p>Command to install:</p>
 <pre tabindex="0"><code>CGO_ENABLED=1 go install -tags extended,withdeploy github.com/gohugoio/hugo@latest
-</code></pre><h1 id="2-quick-start">2 Quick Start</h1>
+</code></pre><h1 id="2-quickly-start-a-blog">2 Quickly Start a Blog</h1>
 <p>Open the Hugo official website in your browser: <a href="https://gohugo.io/" target="_blank">https://gohugo.io/</a>, click on the <code>Themes</code> menu to choose a template you like.</p>
 <h1 id="3-host-on-github">3 Host on GitHub</h1>
 <p>Host the static website generated locally on GitHub for storage without needing to maintain it yourself. Refer to <a href="https://blog.csdn.net/xiao_feng007/article/details/106366218" target="_blank">this article</a>. Update commands are as follows:</p>
@@ -200,37 +200,45 @@
 </span></span><span class="line"><span class="cl"><span class="o">(</span>base<span class="o">)</span> ➜  public git:<span class="o">(</span>main<span class="o">)</span> ✗ git add .
 </span></span><span class="line"><span class="cl"><span class="o">(</span>base<span class="o">)</span> ➜  public git:<span class="o">(</span>main<span class="o">)</span> ✗ git commit -m <span class="s2">&#34;update&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="o">(</span>base<span class="o">)</span> ➜  public git:<span class="o">(</span>main<span class="o">)</span> ✗ git push origin main
-</span></span></code></pre></div><p>This is my GitHub repository: <a href="https://github.com/Greletudiant/bstass2.git" target="_blank">https://github.com/Greletudiant/bstass2.git</a></p>
-<h1 id="github-pages-static-file-deployment">GitHub Pages Static File Deployment</h1>
+</span></span></code></pre></div><p>This is my GitHub repository: <a href="https://github.com/Greletudiant/bstass2.git" target="_blank">https://github.com/Greletudiant/bstass2.git</a>
+<img src="/docs/Screenshot%202025-05-06%20at%2016.47.57.png" alt="My GitHub Repository"></p>
+<h1 id="4-github-pages-static-file-deployment">4 GitHub Pages Static File Deployment</h1>
 <h2 id="1-configure-github-pages">1. Configure GitHub Pages</h2>
 <p>In the repository settings page, locate the &ldquo;GitHub Pages&rdquo; section.<br>
-In the &ldquo;Source&rdquo; dropdown menu, select &ldquo;main branch&rdquo; (or &ldquo;master branch,&rdquo; depending on your repository settings).<br>
+In the &ldquo;Source&rdquo; dropdown menu, select &ldquo;main branch&rdquo; (or &ldquo;master branch,&rdquo; depending on repository settings).<br>
 Click the &ldquo;Save&rdquo; button.</p>
 <h2 id="2-access-the-website">2. Access the Website</h2>
-<p>Wait for a while, and GitHub Pages will automatically build your website.<br>
-Visit your website at: <code>https://yourusername.github.io</code>.</p>
+<p>Wait for a while, and GitHub Pages will automatically build the website.<br>
+Visit the website at: <code>https://yourusername.github.io</code>.</p>
 <p>Refer to <a href="https://blog.csdn.net/zk_tww/article/details/145367292" target="_blank">this article</a> for detailed steps.</p>
-<h1 id="netlify-for-rendering-static-pages-hosted-on-github">Netlify for Rendering Static Pages Hosted on GitHub</h1>
+<h1 id="5-netlify-for-rendering-static-pages-hosted-on-github">5 Netlify for Rendering Static Pages Hosted on GitHub</h1>
 <ol>
 <li>
 <p>Netlify Official Website:<br>
 Homepage: <a href="https://www.netlify.com/" target="_blank">https://www.netlify.com/</a></p>
 </li>
 <li>
-<p>First, register an account on Netlify. You can log in using GitHub, GitLab, or Bitbucket authorization. After logging in, go to the management center and click &ldquo;New site from Git&rdquo; in the top-right corner to add a site.</p>
+<p>First, register an account on Netlify. Log in by using GitHub, GitLab, or Bitbucket authorization. After logging in, go to the management center and click &ldquo;New site from Git&rdquo; in the top-right corner to add a site.</p>
 </li>
 <li>
-<p>Based on your hosting platform, choose GitHub, GitLab, or Bitbucket. For demonstration, we will use GitHub (for GitHub users, don&rsquo;t forget to check the &ldquo;Limit GitHub access to public repositories&rdquo; option).</p>
+<p>Based on the hosting platform, choose GitHub, GitLab, or Bitbucket. For demonstration, we will use GitHub (for GitHub users, don&rsquo;t forget to check the &ldquo;Limit GitHub access to public repositories&rdquo; option).</p>
+</li>
+</ol>
+<p><img src="/docs/Screenshot%202025-05-06%20at%2016.18.45.png" alt="Screenshot of Netlify Deployment Steps"></p>
+<ol>
+<li>
+<p>After clicking GitHub, a window will pop up asking for authorization. Click &ldquo;Authorize netlify,&rdquo; and Netlify will read all the repositories.</p>
 </li>
 <li>
-<p>After clicking GitHub, a window will pop up asking for authorization. Click &ldquo;Authorize netlify,&rdquo; and Netlify will read all your repositories.</p>
+<p>Select the repository you have created, choose the branch (default is master), and click &ldquo;Deploy site.&rdquo; The system will automatically compile the static pages and provide a secondary domain for this site.</p>
 </li>
-<li>
-<p>Select the repository you have created, choose the branch (default is master), and click &ldquo;Deploy site.&rdquo; The system will automatically compile your static pages and provide a secondary domain for your site.</p>
-</li>
-<li>
-<p>After creation, wait for a moment. You will see that the free static space on Netlify has been successfully created, and your GitHub code is now running on Netlify.</p>
-</li>
+</ol>
+<div style="display: flex;">
+    <img src="/docs/Screenshot 2025-05-06 at 16.25.11.png" alt="Step 4" style="width: 48%;">
+    <img src="/docs/Screenshot 2025-05-06 at 16.45.24.png" alt="Step 5" style="width: 48%;">
+</div>
+<ol start="6">
+<li>After creation, wait for a moment. The free static space on Netlify has been successfully created, and these GitHub code is now running on Netlify.</li>
 </ol>
 
       </div>
@@ -359,7 +367,7 @@ Homepage: <a href="https://www.netlify.com/" target="_blank">https://www.netlify
 
 <script type="application/javascript">
     if('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js?2025-05-06')
+        navigator.serviceWorker.register('/sw.js?2025-05-07')
             .catch(function(err) {console.error('ServiceWorker registration failed: ', err);});
     }
 </script>

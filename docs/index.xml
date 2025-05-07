@@ -19,14 +19,14 @@
       <link>/docs/overview/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/docs/overview/</guid>
-      <description>&lt;p&gt;There should be a brief overview of the course here. But I don&amp;rsquo;t know what to write. So I just put a placeholder here. You can edit this file to add your own content.&lt;/p&gt;</description>
+      <description>&lt;p&gt;There should be a brief overview of the course here. But I don&amp;rsquo;t know what to write. So I just put a placeholder here.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Static Personal Blog Website</title>
       <link>/docs/static-personal-blog-website/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/docs/static-personal-blog-website/</guid>
-      <description>&lt;h1 id=&#34;1-install-hugo&#34;&gt;1 Install Hugo&lt;/h1&gt;&#xA;&lt;p&gt;Hugo is a static site generator that can convert Markdown files into HTML files. Before installing Hugo, you need to install Git, Go, and Dart Sass.&lt;/p&gt;&#xA;&lt;h2 id=&#34;git&#34;&gt;Git:&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Build Hugo from source&lt;/li&gt;&#xA;&lt;li&gt;Use Hugo module functionality&lt;/li&gt;&#xA;&lt;li&gt;Install themes as Git submodules&lt;/li&gt;&#xA;&lt;li&gt;Access commit information from a local Git repository&lt;/li&gt;&#xA;&lt;li&gt;Host your site using services like CloudCannon, CloudFlare Pages, GitHub Pages, GitLab Pages, and Netlify.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Download links:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://git-scm.com/download/mac&#34;&gt;Mac Download&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;1-install-hugo&#34;&gt;1 Install Hugo&lt;/h1&gt;&#xA;&lt;p&gt;Hugo is a static site generator that can convert Markdown files into HTML files. Before installing Hugo, we need to install Git, Go, and Dart Sass.&lt;/p&gt;&#xA;&lt;h2 id=&#34;git&#34;&gt;Git:&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Build Hugo from source&lt;/li&gt;&#xA;&lt;li&gt;Use Hugo module functionality&lt;/li&gt;&#xA;&lt;li&gt;Install themes as Git submodules&lt;/li&gt;&#xA;&lt;li&gt;Access commit information from a local Git repository&lt;/li&gt;&#xA;&lt;li&gt;Host your site using services like CloudCannon, CloudFlare Pages, GitHub Pages, GitLab Pages, and Netlify.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Download links:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://git-scm.com/download/mac&#34;&gt;Mac Download&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
