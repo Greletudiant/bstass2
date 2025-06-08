@@ -6,9 +6,9 @@
   <meta name="description" content="fake wabsite">
 <meta name="author" content="Your Name">
 
-<title>Overview · fake website</title>
+<title>Developing an Application with the Aid of LLM · fake website</title>
 
-<link rel="canonical" href="/docs/overview/">
+<link rel="canonical" href="/docs/developing-an-application-with-the-aid-of-llm/">
 
 
 
@@ -124,7 +124,7 @@
 
   <div class="sticky"><strong class="sidebar-section">Documentation</strong>
           
-          <a class="sidebar-link current" href="/docs/overview/">
+          <a class="sidebar-link " href="/docs/overview/">
             
               Overview
             
@@ -156,7 +156,7 @@
 
         <strong class="sidebar-section">Assignments 4</strong>
           
-          <a class="sidebar-link " href="/docs/developing-an-application-with-the-aid-of-llm/">
+          <a class="sidebar-link current" href="/docs/developing-an-application-with-the-aid-of-llm/">
             
               Developing an Application with the Aid of LLM
             
@@ -174,12 +174,86 @@
   <button id="article-nav-toc-btn"><i class="icon icon-toc"></i> On this page</button>
 </nav>
       <header id="article-header">
-  <h1>Overview</h1>
+  <h1>Developing an Application with the Aid of LLM</h1>
 </header>
       <div id="article-content">
         
         
-        <p>There should be a brief overview of the course here. But I don&rsquo;t know what to write. So I just put a placeholder here.</p>
+        <h2 id="background-and-features">Background and Features</h2>
+<p>This project presents an image generation and reconstruction software based on a Variational Autoencoder (VAE) using PyQt5. The application allows users to load a pre-trained VAE model (in .pth format), select local images, and perform automatic image reconstruction and random image generation. The GUI supports theme switching and result visualization, making it convenient for demonstrating and analyzing deep learning model performance.</p>
+<h3 id="expected-features">Expected Features</h3>
+<ul>
+<li>Load local PyTorch VAE models.</li>
+<li>Select images for reconstruction and side-by-side comparison.</li>
+<li>Support random image generation.</li>
+<li>Simple graphical interface with theme switching.</li>
+<li>Package as an executable for Linux platforms.</li>
+</ul>
+<h3 id="technical-challenges">Technical Challenges</h3>
+<ul>
+<li>GUI layout and packaging (PyQt5 + PyInstaller).</li>
+<li>Efficient integration of deep learning models (torch) with the GUI.</li>
+<li>Robust management of file paths, dependencies, and resources.</li>
+</ul>
+<h2 id="development-environment">Development Environment</h2>
+<ul>
+<li><strong>Hardware Configuration:</strong>
+<ul>
+<li>CPU: 13th Gen Intel(R) Core(TM) i7-13700</li>
+<li>Memory: 32 GB</li>
+<li>GPU: NVIDIA RTX 4060ti 8GB</li>
+</ul>
+</li>
+<li><strong>Operating System:</strong>
+<ul>
+<li>Debian GNU/Linux 12 (bookworm)</li>
+</ul>
+</li>
+<li><strong>Programming Language &amp; Main Libraries:</strong>
+<ul>
+<li>Python 3.13.2</li>
+<li>torch 2.7.0</li>
+<li>PyQt5 5.15.11</li>
+<li>Pillow 11.2.1</li>
+</ul>
+</li>
+<li><strong>Main Tools:</strong>
+<ul>
+<li>PyInstaller 6.12.0 (for packaging as an executable)</li>
+<li>Conda/Miniconda (environment management)</li>
+</ul>
+</li>
+<li><strong>AI Model:</strong>
+<ul>
+<li>Custom VAE model trained with PyTorch and saved in .pth format</li>
+</ul>
+</li>
+</ul>
+<h2 id="development-process">Development Process</h2>
+<ol>
+<li>Requirement analysis and GUI feature design.</li>
+<li>Implementation of the VAE core structure (encoder, decoder, forward inference).</li>
+<li>Development of the main interface, sidebar, image display, and file selection using PyQt5.</li>
+<li>Integration of VAE model loading, image reconstruction, and generation logic.</li>
+<li>Iterative interaction with AI assistants (ChatGPT/Deepseek) to refine layout, parameters, and packaging compatibility.</li>
+<li>Testing packaging and runtime on Linux, improving user experience.</li>
+<li>Documentation and repository organization.</li>
+</ol>
+<h2 id="results">Results</h2>
+<h3 id="application-screenshots">Application Screenshots</h3>
+<p><img src="/docs/as4_1.png" alt="Main Application Interface"></p>
+<ul>
+<li>The left panel is for model loading and operations; the right panel displays images and prompts.</li>
+<li>Supports model and image selection, generation and random generation, with intuitive reconstruction comparison.</li>
+<li>Theme switching for a more comfortable viewing experience. The interface design draws inspiration from Apple&rsquo;s style, offering a clean layout and user-friendly operation.</li>
+</ul>
+<h3 id="demo">Demo</h3>
+<ul>
+<li>On Linux, run directly with <code>./vae_gui</code> (ensure executable permission).
+<img src="/docs/as4_2.png" alt="Application Running Screenshot"></li>
+</ul>
+<h2 id="source-code">Source Code</h2>
+<p>GitHub repository: <a href="https://github.com/Greletudiant/bstass2.git" target="_blank">https://github.com/Greletudiant/bstass2.git</a></p>
 
       </div>
       
@@ -196,6 +270,10 @@
   
         
 
+        
+          
+        
+
       
     
         
@@ -204,18 +282,37 @@
           
         
 
-        
-        
       
+    
+        
+
+        
+          
+        
+
+      
+    
+        
+
+        
+          
+        
+
+      
+    
+        
+
+      
+    
 
 
 <footer id="article-footer">
-  <time id="article-last-updated" datetime="2025-04-21"><i class="icon icon-calendar"></i>&nbsp;Last updated: 2025-04-21</time>
+  <time id="article-last-updated" datetime="0001-01-01"><i class="icon icon-calendar"></i>&nbsp;Last updated: 0001-01-01</time>
 
   
-
+    <a id="article-prev-link" href="/docs/deployment-and-integration-of-llm/"><i class="icon icon-prev icon-colored"></i> Prev</a>
   
-    <a id="article-next-link"  data-first-page=true  href="/docs/command-line-documentation/">Next <i class="icon icon-next icon-colored"></i></a>
+
   
 </footer>
     </article>
@@ -223,7 +320,25 @@
   <span class="btn-close"><i class="icon icon-close"></i></span>
   <div class="sticky">
     <strong><i class="icon icon-toc"></i> On this page</strong>
-    <nav id="TableOfContents"></nav>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#background-and-features">Background and Features</a>
+      <ul>
+        <li><a href="#expected-features">Expected Features</a></li>
+        <li><a href="#technical-challenges">Technical Challenges</a></li>
+      </ul>
+    </li>
+    <li><a href="#development-environment">Development Environment</a></li>
+    <li><a href="#development-process">Development Process</a></li>
+    <li><a href="#results">Results</a>
+      <ul>
+        <li><a href="#application-screenshots">Application Screenshots</a></li>
+        <li><a href="#demo">Demo</a></li>
+      </ul>
+    </li>
+    <li><a href="#source-code">Source Code</a></li>
+  </ul>
+</nav>
   </div>
 </aside>
   </main>

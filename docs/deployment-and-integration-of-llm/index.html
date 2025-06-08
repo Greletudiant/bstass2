@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="fake wabsite">
+<meta name="author" content="Your Name">
+
+<title>Deployment and Integration of LLM · fake website</title>
+
+<link rel="canonical" href="/docs/deployment-and-integration-of-llm/">
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/scss/base.css" integrity="">
+
+
+
+<link rel="stylesheet" href="/scss/theme/default.css" integrity="">
+
+
+
+  <link rel="preconnect" href="https://-dsn.algolia.net" crossorigin />
+  
+  <link rel="stylesheet" href="/scss/component/docsearch.css" integrity=""/>
+
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/img/icon/favicon.ico">
+<link rel="icon" href="/img/icon/icon-16.png" sizes="16x16" type="image/png">
+<link rel="icon" href="/img/icon/icon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/img/icon/icon-180.png" sizes="180x180">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+
+  
+
+  </head>
+  <body>
+    <header id="site-header">
+  
+  <div id="site-header-brand">
+    <a href="/">fake website</a>
+  </div>
+
+  
+  <div id="site-header-controls">
+    
+    <div class="dropdown">
+      <button class="dropdown-btn" aria-haspopup="menu" aria-label="theme selector">
+        <i class="icon icon-brightness"></i>
+        <i class="icon icon-select"></i>
+      </button>
+      <ul role="menu" class="dropdown-menu">
+        <li role="menuitem"><button class="color-scheme" data-value="light"><i class="icon icon-light-mode"></i> Light</button></li>
+        <li role="menuitem"><button class="color-scheme" data-value="dark"><i class="icon icon-dark-mode"></i> Dark &nbsp;</button></li>
+        <li role="menuitem"><button class="color-scheme" data-value="night"><i class="icon icon-night-mode"></i> Night</button></li>
+      </ul>
+    </div>
+
+    
+    <div class="dropdown">
+      <button class="dropdown-btn" aria-haspopup="menu" aria-label="language selector">
+        <i class="icon icon-translate"></i>
+        <i class="icon icon-select"></i>
+      </button>
+      <ul role="menu" class="dropdown-menu">
+        
+          <li role="menuitem"><a href="#">English</a></li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+  <div id="site-header-menu">
+    <nav>
+      <ul>
+        
+        
+        
+          
+          <li><a href="/" ><i class='icon icon-home'></i>Home</a></li>
+        
+          
+          <li><a href="/docs"  class="active"><i class='icon icon-book'></i>Documentation</a></li>
+        
+          
+          <li><a href="/admission" ><i class='icon icon-file'></i>Admission</a></li>
+        
+          
+          <li><a href="/diploma" ><i class='icon icon-file'></i>Diploma</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+
+  
+  <div id="site-header-search"></div>
+</header>
+    
+<div id="site-main-content-wrapper">
+  
+  
+    
+
+
+<aside id="sidebar">
+  <span class="btn-close"><i class="icon icon-close"></i></span>
+
+  <div class="sticky"><strong class="sidebar-section">Documentation</strong>
+          
+          <a class="sidebar-link " href="/docs/overview/">
+            
+              Overview
+            
+          </a>
+
+        <strong class="sidebar-section">Assignments 1</strong>
+          
+          <a class="sidebar-link " href="/docs/command-line-documentation/">
+            
+              Command Line &amp; Documentation
+            
+          </a>
+
+        <strong class="sidebar-section">Assignments 2</strong>
+          
+          <a class="sidebar-link " href="/docs/static-personal-blog-website/">
+            
+              Static Personal Blog Website
+            
+          </a>
+
+        <strong class="sidebar-section">Assignments 3</strong>
+          
+          <a class="sidebar-link current" href="/docs/deployment-and-integration-of-llm/">
+            
+              Deployment and Integration of LLM
+            
+          </a>
+
+        <strong class="sidebar-section">Assignments 4</strong>
+          
+          <a class="sidebar-link " href="/docs/developing-an-application-with-the-aid-of-llm/">
+            
+              Developing an Application with the Aid of LLM
+            
+          </a>
+
+        
+  </div>
+</aside>
+
+  
+  <main>
+    <article id="article">
+      <nav id="article-nav">
+  <button id="article-nav-menu-btn"><i class="icon icon-menu"></i> On this section</button>
+  <button id="article-nav-toc-btn"><i class="icon icon-toc"></i> On this page</button>
+</nav>
+      <header id="article-header">
+  <h1>Deployment and Integration of LLM</h1>
+</header>
+      <div id="article-content">
+        
+        
+        <h1 id="deploy-and-utilize-online-large-language-models-llms">Deploy and Utilize Online Large Language Models (LLMs)</h1>
+<h2 id="using-web-interface">Using Web Interface</h2>
+<p>Directly access online LLM websites for conversation:</p>
+<ul>
+<li>Baidu AI <a href="https://ai.baidu.com/tech/chat" target="_blank">link</a></li>
+<li>ChatGPT <a href="https://chat.openai.com/" target="_blank">link</a></li>
+</ul>
+<h2 id="using-api-calls">Using API Calls</h2>
+<p>Call online LLM services via API, using Deepseek as an example:
+Log in to the Deepseek platform <a href="https://platform.deepseek.com/api_keys" target="_blank">link</a> to obtain your API Key.
+Install a chat extension such as <code>cline</code> in VSCode, configure your API Key, and start using it.</p>
+<h1 id="deploy-and-utilize-local-large-language-models-llms">Deploy and Utilize Local Large Language Models (LLMs)</h1>
+<h2 id="install-ollama">Install Ollama</h2>
+<p>Official installation can be slow. As an alternative, download the compressed package from Baidu Netdisk and install it on your Linux device via SSH. <a href="https://blog.csdn.net/2401_87008482/article/details/145613146?ops_request_misc=%257B%2522request%255Fid%2522%253A%25220e84c5a7a9f8ef93116766a5359be757%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=0e84c5a7a9f8ef93116766a5359be757&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-10-145613146-null-null.142%5ev102%5epc_search_result_base6&amp;utm_term=Linux%E7%B3%BB%E7%BB%9FOllama%E5%AE%89%E8%A3%85%E5%8C%85&amp;spm=1018.2226.3001.4187" target="_blank">link</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">scp ollama-linux-amd64.tgz user@10.65.22.149:
+</span></span></code></pre></div><p>Ollama service configuration - Common environment variables <a href="https://blog.csdn.net/zhangxiangweide/article/details/144281962" target="_blank">link</a></p>
+<h2 id="download-models-locally">Download Models Locally</h2>
+<p>For example, to download the llama3 model:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">ollama pull llama3
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">List <span class="nb">local</span> models
+</span></span><span class="line"><span class="cl">ollama list
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">Start the Ollama service
+</span></span><span class="line"><span class="cl">ollama serve
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">Check Ollama service status
+</span></span><span class="line"><span class="cl">systemctl status ollama
+</span></span></code></pre></div><p>Interact with the llama3 model in the terminal:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">ollama run llama3 <span class="s2">&#34;Hello, world!&#34;</span>
+</span></span></code></pre></div><h2 id="configure-ollama-for-browser-access">Configure Ollama for Browser Access</h2>
+<h3 id="configure-ollama-to-listen-on-all-interfaces">Configure Ollama to Listen on All Interfaces</h3>
+<ol>
+<li>Modify the Ollama service configuration:
+<ul>
+<li>Create a systemd file:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo vim /etc/systemd/system/ollama.service
+</span></span></code></pre></div><ul>
+<li>Add the following content:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">[</span>Unit<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">Description</span><span class="o">=</span>Ollama Service
+</span></span><span class="line"><span class="cl"><span class="nv">After</span><span class="o">=</span>network.target
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>Service<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">User</span><span class="o">=</span>root
+</span></span><span class="line"><span class="cl"><span class="nv">ExecStart</span><span class="o">=</span>/home/user/bin/ollama serve <span class="c1"># your ollama path</span>
+</span></span><span class="line"><span class="cl"><span class="nv">Environment</span><span class="o">=</span><span class="s2">&#34;OLLAMA_HOST=0.0.0.0:11434&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">Environment</span><span class="o">=</span><span class="nv">HOME</span><span class="o">=</span><span class="s2">&#34;OLLAMA_ORIGINS=*&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">Environment</span><span class="o">=</span><span class="s2">&#34;OLLAMA_MODELS=/data/soft/ollama/.ollama/models&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">Restart</span><span class="o">=</span>always
+</span></span><span class="line"><span class="cl"><span class="o">[</span>Install<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">WantedBy</span><span class="o">=</span>multi-user.target
+</span></span></code></pre></div><ul>
+<li>Reload systemd configuration:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo systemctl daemon-reload
+</span></span></code></pre></div><ul>
+<li>Start the Ollama service and verify:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo systemctl start ollama
+</span></span><span class="line"><span class="cl">sudo systemctl status ollama <span class="c1"># should show active(running)</span>
+</span></span></code></pre></div>Note the model download location for easy transfer from local to server. The default path is <code>/root/.ollama/models</code>. Check with <code>ls -l /root/.ollama/models</code>.</li>
+<li>Confirm port listening:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">netstat -tunlp <span class="p">|</span> grep <span class="m">11434</span> <span class="c1"># Expected output: tcp6       0      0 :::11434                :::*                    LISTEN      12345/ollama</span>
+</span></span></code></pre></div></li>
+<li>Verify firewall rules:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo firewall-cmd --list-ports <span class="p">|</span> grep <span class="m">11434</span> 
+</span></span></code></pre></div>Expected output: 11434/tcp. If not shown, run:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo firewall-cmd --permanent --add-port<span class="o">=</span>11434/tcp 
+</span></span><span class="line"><span class="cl">sudo firewall-cmd --reload
+</span></span></code></pre></div></li>
+<li>SElinux troubleshooting:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo semanage port -l <span class="p">|</span> grep <span class="m">11434</span>
+</span></span></code></pre></div>If not labeled as http_port_t, run:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo semanage port -a -t http_port_t -p tcp <span class="m">11434</span>
+</span></span></code></pre></div></li>
+<li>Test local browser access:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">curl http://localhost:11434 <span class="c1"># Expected output: Ollama API version info</span>
+</span></span></code></pre></div></li>
+<li>Test LAN browser access:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">curl http://&lt;CentOS_IP&gt;:11434 
+</span></span></code></pre></div></li>
+</ol>
+<h3 id="install-browser-extension">Install Browser Extension</h3>
+<p>Install the browser extension <code>pageassist</code>, enter <code>http://ip:11434</code> to interact with the LLM via a web UI.</p>
+<p><img src="/docs/Screenshot%202025-06-05%20at%2009.45.35.png" alt="Ollama service configuration page screenshot showing service status and port information"></p>
+
+      </div>
+      
+
+
+
+
+
+
+
+
+  
+  
+  
+        
+
+        
+          
+        
+
+      
+    
+        
+
+        
+          
+        
+
+      
+    
+        
+
+        
+          
+        
+
+      
+    
+        
+
+      
+    
+        
+
+        
+          
+        
+
+        
+        
+
+
+<footer id="article-footer">
+  <time id="article-last-updated" datetime="0001-01-01"><i class="icon icon-calendar"></i>&nbsp;Last updated: 0001-01-01</time>
+
+  
+    <a id="article-prev-link" href="/docs/static-personal-blog-website/"><i class="icon icon-prev icon-colored"></i> Prev</a>
+  
+
+  
+    <a id="article-next-link"  href="/docs/developing-an-application-with-the-aid-of-llm/">Next <i class="icon icon-next icon-colored"></i></a>
+  
+</footer>
+    </article>
+    <aside id="toc">
+  <span class="btn-close"><i class="icon icon-close"></i></span>
+  <div class="sticky">
+    <strong><i class="icon icon-toc"></i> On this page</strong>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#using-web-interface">Using Web Interface</a></li>
+    <li><a href="#using-api-calls">Using API Calls</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#install-ollama">Install Ollama</a></li>
+    <li><a href="#download-models-locally">Download Models Locally</a></li>
+    <li><a href="#configure-ollama-for-browser-access">Configure Ollama for Browser Access</a>
+      <ul>
+        <li><a href="#configure-ollama-to-listen-on-all-interfaces">Configure Ollama to Listen on All Interfaces</a></li>
+        <li><a href="#install-browser-extension">Install Browser Extension</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</aside>
+  </main>
+</div>
+
+    <footer id="site-footer">
+  
+  <div id="site-footer-copyright">
+    <a href="https://your.site" target="_blank">
+      <i class="icon icon-copyright"></i> 2023 Your Name
+    </a>
+  </div>
+
+  
+  <div id="site-footer-social">
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+
+  
+  <div id="site-footer-fund">
+
+    
+
+    
+
+  </div>
+
+  
+  <div id="site-footer-love">
+    Made with <i class="icon icon-love icon-colored"></i> &nbsp;from&nbsp;<a href="https://docura.github.io/" target="_blank">Docura</a>
+  </div>
+</footer>
+    
+
+
+
+
+
+
+<script type="text/javascript" src="/js/base.min.js"></script>
+
+
+
+  
+  <script src="/js/component/docsearch.min.js"></script>
+  <script type="application/javascript">
+      docsearch({
+          container: '#site-header-search',
+          appId: '',
+          indexName: '',
+          apiKey: '',
+      });
+  </script>
+
+
+<script type="application/javascript">
+    if('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js?2025-06-08')
+            .catch(function(err) {console.error('ServiceWorker registration failed: ', err);});
+    }
+</script>
+  </body>
+</html>
