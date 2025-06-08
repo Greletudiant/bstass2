@@ -211,7 +211,7 @@
 </li>
 <li><strong>Programming Language &amp; Main Libraries:</strong>
 <ul>
-<li>Python 3.13.2</li>
+<li>Python 3.10</li>
 <li>torch 2.7.0</li>
 <li>PyQt5 5.15.11</li>
 <li>Pillow 11.2.1</li>
@@ -235,7 +235,11 @@
 <li>Implementation of the VAE core structure (encoder, decoder, forward inference).</li>
 <li>Development of the main interface, sidebar, image display, and file selection using PyQt5.</li>
 <li>Integration of VAE model loading, image reconstruction, and generation logic.</li>
-<li>Iterative interaction with AI assistants (ChatGPT/Deepseek) to refine layout, parameters, and packaging compatibility.</li>
+<li>Iterative interaction with AI assistants (ChatGPT/Deepseek) to refine layout, parameters, and packaging compatibility.
+use this order to make it a software:</li>
+</ol>
+<pre tabindex="0"><code class="language-bsah" data-lang="bsah">pyinstaller --noconsole --onefile vae_gui.py
+</code></pre><ol start="6">
 <li>Testing packaging and runtime on Linux, improving user experience.</li>
 <li>Documentation and repository organization.</li>
 </ol>
